@@ -1472,9 +1472,11 @@ containing a value of this type.
         public static final int action_menu_divider=0x7f080028;
         public static final int action_menu_presenter=0x7f080029;
         public static final int action_mode_close_button=0x7f080036;
-        public static final int action_search=0x7f080050;
-        public static final int action_settings=0x7f08004f;
+        public static final int action_search=0x7f080052;
+        public static final int action_settings=0x7f080051;
         public static final int activity_chooser_view_content=0x7f080037;
+        public static final int adFragment=0x7f08004f;
+        public static final int adView=0x7f080050;
         public static final int always=0x7f08001e;
         public static final int beginning=0x7f080023;
         public static final int book_now=0x7f080010;
@@ -1484,11 +1486,11 @@ containing a value of this type.
         public static final int checkbox=0x7f08003f;
         public static final int classic=0x7f080011;
         public static final int collapseActionView=0x7f080020;
+        public static final int container=0x7f08004e;
         public static final int default_activity_button=0x7f08003a;
         public static final int dialog=0x7f080021;
         public static final int disableHome=0x7f08001b;
         public static final int dropdown=0x7f080022;
-        public static final int edit_message=0x7f08004e;
         public static final int edit_query=0x7f080042;
         public static final int end=0x7f080025;
         public static final int expand_activities_button=0x7f080038;
@@ -1596,7 +1598,9 @@ containing a value of this type.
         public static final int abc_simple_decor=0x7f030017;
         public static final int activity_display_message=0x7f030018;
         public static final int activity_main=0x7f030019;
-        public static final int support_simple_spinner_dropdown_item=0x7f03001a;
+        public static final int fragment_ad=0x7f03001a;
+        public static final int fragment_my=0x7f03001b;
+        public static final int support_simple_spinner_dropdown_item=0x7f03001c;
     }
     public static final class menu {
         public static final int display_message=0x7f0c0000;
@@ -1646,6 +1650,9 @@ containing a value of this type.
         public static final int action_search=0x7f07002e;
         public static final int action_settings=0x7f07002a;
         public static final int app_name=0x7f070027;
+        /**  This is an ad unit ID for a test ad. Replace with your own banner ad unit id. 
+         */
+        public static final int banner_ad_unit_id=0x7f07002f;
         public static final int button_send=0x7f070029;
         /**  Button in confirmation dialog to enable Google Play services.  Clicking it
         will direct user to application settings of Google Play services where they
