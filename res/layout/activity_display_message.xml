@@ -7,10 +7,11 @@
     tools:ignore="MergeRootFrame">
 
     <fragment
+        android:id="@+id/myFragment"
         android:name="com.example.myfirstapp.DisplayMessageActivity$PlaceholderFragment"
         android:layout_width="match_parent"
-        android:layout_height="match_parent" />
-        <!-- android:layout_above="@+id/adFragment" -->
+        android:layout_height="match_parent"
+        android:layout_above="@+id/adFragment" />
     <fragment
         android:id="@+id/adFragment"
         android:name="com.example.myfirstapp.DisplayMessageActivity$AdFragment"
