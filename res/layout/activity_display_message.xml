@@ -19,7 +19,7 @@ Mauris sit amet lobortis orci. Nulla facilisi. Aliquam consectetur egestas nisl,
 		    <LinearLayout
 		        android:id="@+id/linearLayout"
 		        android:orientation="vertical"
-		        android:layout_width="wrap_content"
+		        android:layout_width="fill_parent"
 		        android:layout_height="wrap_content"
 		        android:layout_centerHorizontal="true" />
             <TextView android:layout_height="wrap_content"
