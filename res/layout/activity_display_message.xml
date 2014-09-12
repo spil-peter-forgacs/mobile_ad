@@ -11,11 +11,6 @@
         <LinearLayout android:layout_height="fill_parent"
             android:layout_width="fill_parent"
             android:orientation="vertical">
-            <TextView android:layout_height="wrap_content"
-                android:layout_width="wrap_content"
-                android:text="Place very long string here...Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi at velit risus. Nunc id laoreet turpis. Suspendisse iaculis tristique ligula non interdum. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Ut semper, eros at sagittis ornare, mauris eros hendrerit turpis, sit amet iaculis dolor sapien in lectus. Nam nisi nulla, blandit ultrices hendrerit vitae, hendrerit sed est. Phasellus placerat bibendum metus, congue ultrices ipsum condimentum in. Quisque nec odio tempor, malesuada tortor eget, consequat odio. Vestibulum eu aliquam nisi. Sed dapibus ipsum dolor, non aliquet purus consequat in. Nunc ut vestibulum quam. Praesent dui est, porta eu gravida vitae, elementum at mi. Phasellus pellentesque massa nec dui suscipit, sed euismod tellus bibendum. Duis fringilla tempus lectus, quis egestas tellus tempor nec. Duis sit amet lectus arcu. Pellentesque aliquet ligula ut ligula feugiat, vel tincidunt lectus faucibus.
-
-Mauris sit amet lobortis orci. Nulla facilisi. Aliquam consectetur egestas nisl, eget molestie ligula convallis in. Nullam nisi sem, varius sed efficitur vitae, malesuada at velit. Pellentesque porttitor dapibus libero in volutpat. Quisque efficitur consequat ligula, eu venenatis sem elementum vel. In hac habitasse platea dictumst. Nam et massa vulputate, gravida nulla in, vehicula sem. Fusce eget mi odio."/>
 		    <LinearLayout
 		        android:id="@+id/linearLayout"
 		        android:orientation="vertical"
@@ -24,11 +19,18 @@ Mauris sit amet lobortis orci. Nulla facilisi. Aliquam consectetur egestas nisl,
 		        android:layout_centerHorizontal="true" />
             <TextView android:layout_height="wrap_content"
                 android:layout_width="wrap_content"
-                android:text="Fusce ultrices risus vitae malesuada mattis. Suspendisse imperdiet, libero id mollis feugiat, ligula dolor accumsan massa, non aliquet neque libero eget elit. Cras id viverra lacus, sit amet blandit lacus. Ut scelerisque eget nunc eu ultrices. Nam nisi velit, efficitur sed velit ut, congue faucibus velit. Proin condimentum magna a ipsum malesuada fermentum. Fusce et risus pulvinar, blandit risus ut, fringilla elit. Proin eleifend posuere leo. Ut elementum tellus sit amet ipsum placerat iaculis. Praesent non tortor volutpat, dapibus neque eget, feugiat dui. Nullam rhoncus, tortor nec dignissim lacinia, sem purus blandit libero, in venenatis ligula dolor ac dolor. Ut in sapien eu augue hendrerit malesuada ac sed est. Nullam ut laoreet leo. Nulla consequat magna et est pharetra eleifend.
-
-Nullam tortor massa, bibendum eu turpis id, sollicitudin fringilla orci. Aenean pretium lectus mi, gravida pretium magna vehicula at. In enim massa, accumsan id convallis aliquam, lacinia vel leo. Pellentesque quis mauris quis mauris mollis aliquet. Pellentesque sit amet lacinia ligula. Pellentesque interdum libero nisi. Vestibulum neque arcu, egestas vitae volutpat nec, iaculis ut sapien. Aliquam erat volutpat. Aenean suscipit sapien vitae facilisis ultricies. Donec porta quam ut turpis porttitor sodales.
-
-Proin nec ullamcorper ante, ac scelerisque purus. Etiam convallis nec felis pulvinar condimentum. Aenean volutpat aliquet arcu at placerat. Integer elementum velit eget mi ultricies, vel hendrerit arcu fermentum. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Vivamus consectetur nunc sit amet magna malesuada dictum. Proin fringilla suscipit tortor, non interdum quam vehicula ac. Vivamus vulputate lacinia risus vel lacinia. Morbi egestas in orci a eleifend. Integer porttitor tellus quis viverra blandit. Sed ut est sed nisi tempor blandit quis et nunc. Aliquam tempor, eros ut commodo condimentum, eros lacus auctor arcu, eu pretium nibh libero non ex. Nulla facilisi. Etiam sagittis enim ut tortor congue, a vehicula dui luctus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Aenean euismod id sapien sed rhoncus."/>
+                android:id="@+id/sampleText1"
+                android:text=""/>
+		    <LinearLayout
+		        android:id="@+id/linearLayoutRectangle"
+		        android:orientation="vertical"
+		        android:layout_width="fill_parent"
+		        android:layout_height="wrap_content"
+		        android:layout_centerHorizontal="true" />
+            <TextView android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:id="@+id/sampleText2"
+                android:text=""/>
 		</LinearLayout>
     </ScrollView>
 </RelativeLayout>

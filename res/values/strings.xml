@@ -13,4 +13,186 @@
     <!-- This is an ad unit ID for a test ad. Replace with your own banner ad unit id. -->
     <string name="banner_ad_unit_id">ca-app-pub-3940256099942544/6300978111</string>
     
+    <string name="htmlFormattedText1">
+      <![CDATA[
+<div class="wdg_new_list box tiles" id="wdg_new_list">
+    <h2 class="title">
+        <a href="/games/new">New Games</a>
+        <a href="/games/new" class="more-button button">More</a>
+    </h2>
+    <ul class="responsive-list">
+        
+        <li class="box fill round tile">
+            <a class="tile-frame opengameplayer" data-id="576742227280292473" title="Klondike - the lost expedition" href="/game/klondike-the-lost-expedition">
+                <img class="tile-thumb" src="http://static3.spilcdn.com/tw/cimg/thumbnails/120X90/2/9/158329/20140912100707_klondike-the-lost-expedition.gif" alt="Klondike - the lost expedition">
+            </a>
+        </li>
+        
+        <li class="box fill round tile">
+            <a class="tile-frame opengameplayer" data-id="576742227280292439" title="Zombie Return" href="/game/zombie-return">
+                <img class="tile-thumb" src="http://static3.spilcdn.com/tw/120X90/9/5/158295/20140907031532_Zombie-Return.jpg" alt="Zombie Return">
+            </a>
+        </li>
+        
+        <li class="box fill round tile">
+            <a class="tile-frame opengameplayer" data-id="576742227280292033" title="Pumpkin Bingo" href="/game/pumpkin-bingo">
+                <img class="tile-thumb" src="http://static3.spilcdn.com/tw/120X90/8/9/157889/20140907041142_Pumpkin-Bingo.jpg" alt="Pumpkin Bingo">
+            </a>
+        </li>
+        
+        <li class="box fill round tile">
+            <a class="tile-frame opengameplayer" data-id="576742227280292408" title="Lazy Hippo" href="/game/lazy-hippo">
+                <img class="tile-thumb" src="http://static3.spilcdn.com/tw/120X90/6/4/158264/20140907025034_Lazy-Hippo.jpg" alt="Lazy Hippo">
+            </a>
+        </li>
+        
+        <li class="box fill round tile">
+            <a class="tile-frame opengameplayer" data-id="576742227280292438" title="Foot Yard" href="/game/foot-yard">
+                <img class="tile-thumb" src="http://static3.spilcdn.com/tw/120X90/9/4/158294/20140904023100_Foot-Yard.jpg" alt="Foot Yard">
+            </a>
+        </li>
+        
+        <li class="box fill round tile">
+            <a class="tile-frame opengameplayer" data-id="576742227280292462" title="Jumpers Family" href="/game/jumpers-family">
+                <img class="tile-thumb" src="http://static3.spilcdn.com/tw/120X90/1/8/158318/20140823040419_Jumpers-Family.jpg" alt="Jumpers Family">
+            </a>
+        </li>
+        
+        <li class="box fill round tile">
+            <a class="tile-frame opengameplayer" data-id="576742227280292537" title="Alice The Chase" href="/game/alice-the-chase">
+                <img class="tile-thumb" src="http://static3.spilcdn.com/tw/120X90/9/3/158393/20140827032607_Alice-The-Chase.png" alt="Alice The Chase">
+            </a>
+        </li>
+        
+        <li class="box fill round tile">
+            <a class="tile-frame opengameplayer" data-id="576742227280291872" title="Take the Apple" href="/game/take-the-apple">
+                <img class="tile-thumb" src="http://static3.spilcdn.com/tw/120X90/2/8/157728/20140905042057_Take-the-Apple.jpg" alt="Take the Apple">
+            </a>
+        </li>
+        
+        <li class="box fill round tile">
+            <a class="tile-frame opengameplayer" data-id="576742227280292293" title="Fishy Adventures" href="/game/fishy-adventures">
+                <img class="tile-thumb" src="http://static3.spilcdn.com/tw/120X90/4/9/158149/20140904092921_Fishy-Adventures.jpg" alt="Fishy Adventures">
+            </a>
+        </li>
+        
+        <li class="box fill round tile">
+            <a class="tile-frame opengameplayer" data-id="576742227280291330" title="Sidetracks" href="/game/sidetracks">
+                <img class="tile-thumb" src="http://static3.spilcdn.com/tw/120X90/8/6/157186/20140422052937_Sidetracks.jpg" alt="Sidetracks">
+            </a>
+        </li>
+        
+        <li class="box fill round tile">
+            <a class="tile-frame opengameplayer" data-id="576742227280292037" title="Dual Swess" href="/game/dual-swess">
+                <img class="tile-thumb" src="http://static3.spilcdn.com/tw/120X90/9/3/157893/20140828051024_Dual-Swess.jpg" alt="Dual Swess">
+            </a>
+        </li>
+        
+        <li class="box fill round tile">
+            <a class="tile-frame opengameplayer" data-id="576742227280292536" title="Sam Bogert" href="/game/sam-bogert">
+                <img class="tile-thumb" src="http://static3.spilcdn.com/tw/120X90/9/2/158392/20140827032048_Sam-Bogert.png" alt="Sam Bogert">
+            </a>
+        </li>
+        
+    </ul>
+</div>
+      ]]></string>
+    
+    <string name="htmlFormattedText2">
+      <![CDATA[
+<div class="wdg_popular_games box tiles" id="wdg_popular_games">
+    <h2 class="title">
+        <a href="/games/most_played">Popular Games</a>
+        <a href="/games/most_played" id="tileMore" class="more-button button">More</a>
+    </h2>
+    <ul class="responsive-list">
+        
+
+        <li class="box fill round tile">
+            <a class="tile-frame opengameplayer" data-id="576742227280290427" title="Snail Bob" href="/game/snail-bob">
+                <img class="tile-thumb" src="http://static3.spilcdn.com/tw/cimg/thumbnails/120X90/8/3/156283/20140730150303_Snail-Bob.jpg" alt="Snail Bob">
+            </a>
+        </li>
+        
+
+        <li class="box fill round tile">
+            <a class="tile-frame opengameplayer" data-id="576742227280292154" title="Back to Candyland Episode 3: Sweet River" href="/game/back-to-candyland-episode-3-sweet-river">
+                <img class="tile-thumb" src="http://static3.spilcdn.com/tw/120X90/1/0/158010/20140724094002_Back-to-Candyland-Episode-3-Sweet-River.jpg" alt="Back to Candyland Episode 3: Sweet River">
+            </a>
+        </li>
+        
+
+        <li class="box fill round tile">
+            <a class="tile-frame opengameplayer" data-id="576742227280285107" title="Mystic India Pop" href="/game/mystic-india-pop">
+                <img class="tile-thumb" src="http://static3.spilcdn.com/tw/120X90/6/3/150963/20110830112610_Mystic-India-Pop.jpg" alt="Mystic India Pop">
+            </a>
+        </li>
+        
+
+        <li class="box fill round tile">
+            <a class="tile-frame opengameplayer" data-id="576742227280291433" title="My Dolphin Show 4" href="/game/my-dolphin-show-4">
+                <img class="tile-thumb" src="http://static3.spilcdn.com/tw/120X90/8/9/157289/20140603104759_My-Dolphin-Show-4.jpg" alt="My Dolphin Show 4">
+            </a>
+        </li>
+        
+
+        <li class="box fill round tile">
+            <a class="tile-frame opengameplayer" data-id="576742227280292229" title="Snail Bob 2" href="/game/snail-bob-2">
+                <img class="tile-thumb" src="http://static3.spilcdn.com/tw/120X90/8/5/158085/20140724034643_Snail-Bob-2.jpg" alt="Snail Bob 2">
+            </a>
+        </li>
+        
+
+        <li class="box fill round tile">
+            <a class="tile-frame opengameplayer" data-id="576742227280292174" title="Burger Restaurant Express" href="/game/burger-restaurant-express">
+                <img class="tile-thumb" src="http://static3.spilcdn.com/tw/120X90/3/0/158030/20140807032628_Burger-Restaurant-Express.jpg" alt="Burger Restaurant Express">
+            </a>
+        </li>
+        
+
+        <li class="box fill round tile">
+            <a class="tile-frame opengameplayer" data-id="576742227280292408" title="Lazy Hippo" href="/game/lazy-hippo">
+                <img class="tile-thumb" src="http://static3.spilcdn.com/tw/120X90/6/4/158264/20140907025034_Lazy-Hippo.jpg" alt="Lazy Hippo">
+            </a>
+        </li>
+        
+
+        <li class="box fill round tile">
+            <a class="tile-frame opengameplayer" data-id="576742227280292439" title="Zombie Return" href="/game/zombie-return">
+                <img class="tile-thumb" src="http://static3.spilcdn.com/tw/120X90/9/5/158295/20140907031532_Zombie-Return.jpg" alt="Zombie Return">
+            </a>
+        </li>
+        
+
+        <li class="box fill round tile">
+            <a class="tile-frame opengameplayer" data-id="576742227280291557" title="Candy rain" href="/game/candy-rain">
+                <img class="tile-thumb" src="http://static3.spilcdn.com/tw/120X90/1/3/157413/20140516034329_Candy-rain.jpg" alt="Candy rain">
+            </a>
+        </li>
+        
+
+        <li class="box fill round tile">
+            <a class="tile-frame opengameplayer" data-id="576742227280292438" title="Foot Yard" href="/game/foot-yard">
+                <img class="tile-thumb" src="http://static3.spilcdn.com/tw/120X90/9/4/158294/20140904023100_Foot-Yard.jpg" alt="Foot Yard">
+            </a>
+        </li>
+        
+
+        <li class="box fill round tile">
+            <a class="tile-frame opengameplayer" data-id="576742227280290541" title="Mahjong Express" href="/game/mahjong-express">
+                <img class="tile-thumb" src="http://static3.spilcdn.com/tw/cimg/thumbnails/120X90/9/7/156397/20140122143230_Mahjong-Express.jpg" alt="Mahjong Express">
+            </a>
+        </li>
+        
+
+        <li class="box fill round tile">
+            <a class="tile-frame opengameplayer" data-id="576742227280292462" title="Jumpers Family" href="/game/jumpers-family">
+                <img class="tile-thumb" src="http://static3.spilcdn.com/tw/120X90/1/8/158318/20140823040419_Jumpers-Family.jpg" alt="Jumpers Family">
+            </a>
+        </li>
+        
+    </ul>
+</div>
+      ]]></string>
+    
 </resources>
