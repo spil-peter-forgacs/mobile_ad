@@ -6,7 +6,7 @@
     <string name="load_interstitial">Load Interstitial</string>
     <string name="checkbox_lb">Leaderboard</string>
     <string name="checkbox_mr">Medium rectangle</string>
-    <string name="button_google_mobile_leaderboard">Google Mobile leaderboard</string>
+    <string name="button_google_mobile_ads">Google Mobile ads</string>
     
     <string name="title_activity_main">MainActivity</string>
     <string name="title_activity_display_message">My Message</string>

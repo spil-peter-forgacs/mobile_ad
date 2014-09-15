@@ -43,21 +43,29 @@ public class DisplayMessageActivity extends ActionBarActivity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_display_message);
-		
+
+		// Long HTML
 		stringWithHtml = getString(R.string.htmlFormattedText1);
 		spannedValue = Html.fromHtml(stringWithHtml,getImageHTML(),null);
 		sampleTextView = (TextView)findViewById(R.id.sampleText1);
 		sampleTextView.setText(spannedValue);
-		
+
+		// Create an ad.
+		createAd(AdSize.BANNER, R.id.linearLayoutLeaderboard);
+	    
+		// Long HTML
 		stringWithHtml = getString(R.string.htmlFormattedText2);
 		spannedValue = Html.fromHtml(stringWithHtml,getImageHTML(),null);
 		sampleTextView = (TextView)findViewById(R.id.sampleText2);
 		sampleTextView.setText(spannedValue);
-
-		
+	    
 		// Create an ad.
+		createAd(AdSize.MEDIUM_RECTANGLE, R.id.linearLayoutRectangle);
+    }
+	
+	private void createAd(AdSize adSize, int layoutId) {
 	    adView = new AdView(this);
-	    adView.setAdSize(AdSize.BANNER);
+	    adView.setAdSize(adSize);
 	    adView.setAdUnitId(AD_UNIT_ID);
 
 	    // Set the AdListener.
@@ -106,8 +114,8 @@ public class DisplayMessageActivity extends ActionBarActivity {
 	      }
 	    });    
 	    // Add the AdView to the view hierarchy.
-	    LinearLayout layout = (LinearLayout) findViewById(R.id.linearLayout);
-	    layout.addView(adView);
+	    LinearLayout layoutRectangle = (LinearLayout) findViewById(layoutId);
+	    layoutRectangle.addView(adView);
 
 	    // Create an ad request. Check logcat output for the hashed device ID to
 	    // get test ads on a physical device.
@@ -118,75 +126,7 @@ public class DisplayMessageActivity extends ActionBarActivity {
 
 	    // Start loading the ad in the background.
 	    adView.loadAd(adRequest);
-	    
-	    
-	    
-	    
-		
-		// Create an ad.
-	    adView = new AdView(this);
-	    adView.setAdSize(AdSize.MEDIUM_RECTANGLE);
-	    adView.setAdUnitId(AD_UNIT_ID);
-
-	    // Set the AdListener.
-	    adView.setAdListener(new AdListener() {
-	      /** Called when an ad is clicked and about to return to the application. */
-	      @Override
-	      public void onAdClosed() {
-	        Log.d(LOG_TAG, "onAdClosed");
-	        Toast.makeText(DisplayMessageActivity.this, "onAdClosed", Toast.LENGTH_SHORT).show();
-	      }
-
-	      /** Called when an ad failed to load. */
-	      @Override
-	      public void onAdFailedToLoad(int error) {
-	        String message = "onAdFailedToLoad: " + getErrorReason(error);
-	        Log.d(LOG_TAG, message);
-	        Toast.makeText(DisplayMessageActivity.this, message, Toast.LENGTH_SHORT).show();
-	      }
-
-	      /**
-	       * Called when an ad is clicked and going to start a new Activity that will
-	       * leave the application (e.g. breaking out to the Browser or Maps
-	       * application).
-	       */
-	      @Override
-	      public void onAdLeftApplication() {
-	        Log.d(LOG_TAG, "onAdLeftApplication");
-	        Toast.makeText(DisplayMessageActivity.this, "onAdLeftApplication", Toast.LENGTH_SHORT).show();
-	      }
-
-	      /**
-	       * Called when an Activity is created in front of the app (e.g. an
-	       * interstitial is shown, or an ad is clicked and launches a new Activity).
-	       */
-	      @Override
-	      public void onAdOpened() {
-	        Log.d(LOG_TAG, "onAdOpened");
-	        Toast.makeText(DisplayMessageActivity.this, "onAdOpened", Toast.LENGTH_SHORT).show();
-	      }
-
-	      /** Called when an ad is loaded. */
-	      @Override
-	      public void onAdLoaded() {
-	        Log.d(LOG_TAG, "onAdLoaded");
-	        Toast.makeText(DisplayMessageActivity.this, "onAdLoaded", Toast.LENGTH_SHORT).show();
-	      }
-	    });    
-	    // Add the AdView to the view hierarchy.
-	    LinearLayout layoutRectangle = (LinearLayout) findViewById(R.id.linearLayoutRectangle);
-	    layoutRectangle.addView(adView);
-
-	    // Create an ad request. Check logcat output for the hashed device ID to
-	    // get test ads on a physical device.
-	    AdRequest adRequestRectangle = new AdRequest.Builder()
-	        .addTestDevice(AdRequest.DEVICE_ID_EMULATOR)
-            .addTestDevice("C7780C08B0538F034D630D3AC89DF5E8")
-	        .build();
-
-	    // Start loading the ad in the background.
-	    adView.loadAd(adRequestRectangle);
-    }
+	}
 
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
