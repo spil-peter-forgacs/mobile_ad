@@ -15,6 +15,7 @@ import android.support.v7.app.ActionBarActivity;
 import android.text.Html;
 import android.text.Html.ImageGetter;
 import android.text.Spanned;
+import android.content.Intent;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.os.StrictMode;
@@ -44,29 +45,77 @@ public class DisplayMessageActivity extends ActionBarActivity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_display_message);
-
-		if (android.os.Build.VERSION.SDK_INT > 9) {
-			StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
-			StrictMode.setThreadPolicy(policy);
-		}
 		
+        if (android.os.Build.VERSION.SDK_INT > 9) {
+            StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
+            StrictMode.setThreadPolicy(policy);
+        }
+        
+        // Get the message from the intent
+        Bundle bundle = getIntent().getExtras();
+    	Boolean message_lb = true;
+    	Boolean message_mr = true;
+        if (bundle!=null){
+        	message_lb = bundle.getBoolean(MainActivity.EXTRA_MESSAGE_LB);
+        	message_mr = bundle.getBoolean(MainActivity.EXTRA_MESSAGE_MR);
+        }
+
+        
+        // Later development:
+        // http://stackoverflow.com/questions/7424512/android-html-imagegetter-as-asynctask
+        
+        /*
+		Thread thread = new Thread(){
+		    @Override
+		    public void run() {
+		        try {
+                    runOnUiThread(new Runnable() {
+	                    @Override
+	                    public void run() {
+	    		    		// Long HTML
+	    		    		stringWithHtml = getString(R.string.htmlFormattedText1);
+	    		    		spannedValue = Html.fromHtml(stringWithHtml,getImageHTML(),null);
+	    		    		sampleTextView = (TextView)findViewById(R.id.sampleText1);
+	    		    		sampleTextView.setText(spannedValue);
+	    		    		
+	    		    		// Long HTML
+	    		    		stringWithHtml = getString(R.string.htmlFormattedText2);
+	    		    		spannedValue = Html.fromHtml(stringWithHtml,getImageHTML(),null);
+	    		    		sampleTextView = (TextView)findViewById(R.id.sampleText2);
+	    		    		sampleTextView.setText(spannedValue);
+
+	                    }
+	                });
+		        } catch (Exception e) {
+		            e.printStackTrace();
+		        }
+		    }
+		};
+		thread.start();
+		*/
+
 		// Long HTML
 		stringWithHtml = getString(R.string.htmlFormattedText1);
 		spannedValue = Html.fromHtml(stringWithHtml,getImageHTML(),null);
 		sampleTextView = (TextView)findViewById(R.id.sampleText1);
 		sampleTextView.setText(spannedValue);
 
-		// Create an ad.
-		createAd(AdSize.BANNER, R.id.linearLayoutLeaderboard);
-	    
 		// Long HTML
 		stringWithHtml = getString(R.string.htmlFormattedText2);
 		spannedValue = Html.fromHtml(stringWithHtml,getImageHTML(),null);
 		sampleTextView = (TextView)findViewById(R.id.sampleText2);
 		sampleTextView.setText(spannedValue);
-	    
-		// Create an ad.
-		createAd(AdSize.MEDIUM_RECTANGLE, R.id.linearLayoutRectangle);
+
+		if (message_lb) {
+			// Create an ad.
+			createAd(AdSize.BANNER, R.id.linearLayoutLeaderboard);
+        }
+		
+        if (message_mr) {
+    		// Create an ad.
+    		createAd(AdSize.MEDIUM_RECTANGLE, R.id.linearLayoutRectangle);
+        }
+
     }
 	
 	private void createAd(AdSize adSize, int layoutId) {
@@ -176,22 +225,6 @@ public class DisplayMessageActivity extends ActionBarActivity {
     public ImageGetter getImageHTML() {
 		ImageGetter imageGetter = new ImageGetter() {
 			public Drawable getDrawable(String source) {
-				
-		        /*
-		        int id;
-		        
-		        //if (ource.equals("hughjackman.jpg")) {
-		               id = R.drawable.ic_launcher;
-		        //}
-		        //else {
-		        //    return null;
-		        //}
-
-		       Drawable d = getResources().getDrawable(id);
-		       d.setBounds(0,0,d.getIntrinsicWidth(),d.getIntrinsicHeight());
-		       return d;
-		       */
-
 				try {
 					Drawable drawable = Drawable.createFromStream(new URL(source).openStream(), "src name");
 					drawable.setBounds(0, 0, 6 * drawable.getIntrinsicWidth(), 6 * drawable.getIntrinsicHeight());

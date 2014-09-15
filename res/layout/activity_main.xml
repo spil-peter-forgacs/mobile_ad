@@ -12,11 +12,13 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/checkbox_lb"
+        android:checked="true"
         android:onClick="onCheckboxLbClicked"/>
     <CheckBox android:id="@+id/checkbox_mr"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/checkbox_mr"
+        android:checked="true"
         android:onClick="onCheckboxMrClicked"/>
     <Button
         android:layout_width="wrap_content"
