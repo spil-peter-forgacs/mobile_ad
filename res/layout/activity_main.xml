@@ -3,6 +3,11 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical" >
+    <Button android:id="@+id/loadButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/load_interstitial"
+        android:onClick="loadInterstitial"/>
     <CheckBox android:id="@+id/checkbox_lb"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
