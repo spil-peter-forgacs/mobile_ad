@@ -17,6 +17,7 @@ import android.text.Html.ImageGetter;
 import android.text.Spanned;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
+import android.os.StrictMode;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.Menu;
@@ -44,6 +45,11 @@ public class DisplayMessageActivity extends ActionBarActivity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_display_message);
 
+		if (android.os.Build.VERSION.SDK_INT > 9) {
+			StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
+			StrictMode.setThreadPolicy(policy);
+		}
+		
 		// Long HTML
 		stringWithHtml = getString(R.string.htmlFormattedText1);
 		spannedValue = Html.fromHtml(stringWithHtml,getImageHTML(),null);
@@ -171,7 +177,9 @@ public class DisplayMessageActivity extends ActionBarActivity {
 		ImageGetter imageGetter = new ImageGetter() {
 			public Drawable getDrawable(String source) {
 				
+		        /*
 		        int id;
+		        
 		        //if (ource.equals("hughjackman.jpg")) {
 		               id = R.drawable.ic_launcher;
 		        //}
@@ -182,17 +190,16 @@ public class DisplayMessageActivity extends ActionBarActivity {
 		       Drawable d = getResources().getDrawable(id);
 		       d.setBounds(0,0,d.getIntrinsicWidth(),d.getIntrinsicHeight());
 		       return d;
+		       */
 
-				/*
 				try {
 					Drawable drawable = Drawable.createFromStream(new URL(source).openStream(), "src name");
-					drawable.setBounds(0, 0, drawable.getIntrinsicWidth(),drawable.getIntrinsicHeight());
+					drawable.setBounds(0, 0, 6 * drawable.getIntrinsicWidth(), 6 * drawable.getIntrinsicHeight());
 					return drawable;
 				} catch(IOException exception) {
 					Log.v("IOException",exception.getMessage());
 					return null;
 				}
-		       */
 			}
 		};
 		return imageGetter;
