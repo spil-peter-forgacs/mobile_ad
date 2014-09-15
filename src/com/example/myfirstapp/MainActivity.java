@@ -17,6 +17,12 @@ public class MainActivity extends ActionBarActivity {
 		startActivity(intent);
 	}
 	
+	public void onCheckboxLbClicked(View view) {
+	}
+	
+	public void onCheckboxMrClicked(View view) {
+	}
+	
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
