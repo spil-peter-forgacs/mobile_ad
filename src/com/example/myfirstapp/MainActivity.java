@@ -17,9 +17,9 @@ import android.widget.Toast;
 
 
 public class MainActivity extends ActionBarActivity {
-	
+    
     /** The log tag. */
-	private static final String LOG_TAG = "InterstitialSample";
+    private static final String LOG_TAG = "InterstitialSample";
 
     /** Your ad unit id. Replace with your actual ad unit id. */
     private static final String AD_UNIT_ID = "ca-mb-app-pub-6675826664759732/6959510322";
@@ -32,23 +32,23 @@ public class MainActivity extends ActionBarActivity {
     public final static String EXTRA_MESSAGE_LB = "com.example.myfirstapp.MESSAGE_LB";
     public final static String EXTRA_MESSAGE_MR = "com.example.myfirstapp.MESSAGE_MR";
 
-	/** Called when the user clicks the Send button */
-	public void sendMessage(View view) {
-		chkLb = (CheckBox) findViewById(R.id.checkbox_lb);
-		chkMr = (CheckBox) findViewById(R.id.checkbox_mr);
-		
-		Intent intent = new Intent(this, DisplayMessageActivity.class);
-		intent.putExtra(EXTRA_MESSAGE_LB, chkLb.isChecked());
-		intent.putExtra(EXTRA_MESSAGE_MR, chkMr.isChecked());
-		startActivity(intent);
-	}
-	
-	public void onCheckboxLbClicked(View view) {
-	}
-	
-	public void onCheckboxMrClicked(View view) {
-	}
-	
+    /** Called when the user clicks the Send button */
+    public void sendMessage(View view) {
+        chkLb = (CheckBox) findViewById(R.id.checkbox_lb);
+        chkMr = (CheckBox) findViewById(R.id.checkbox_mr);
+        
+        Intent intent = new Intent(this, DisplayMessageActivity.class);
+        intent.putExtra(EXTRA_MESSAGE_LB, chkLb.isChecked());
+        intent.putExtra(EXTRA_MESSAGE_MR, chkMr.isChecked());
+        startActivity(intent);
+    }
+    
+    public void onCheckboxLbClicked(View view) {
+    }
+    
+    public void onCheckboxMrClicked(View view) {
+    }
+    
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
