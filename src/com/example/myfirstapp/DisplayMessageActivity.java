@@ -139,6 +139,9 @@ public class DisplayMessageActivity extends ActionBarActivity {
         AdRequest adRequest = new AdRequest.Builder()
             .addTestDevice(AdRequest.DEVICE_ID_EMULATOR)
             .addTestDevice("C7780C08B0538F034D630D3AC89DF5E8")
+            .addTestDevice("3dda3d969987becb")
+            .addTestDevice("65083ee0257af1f0")
+            .addTestDevice("eea04b2d9a14f90e")
             .build();
 
         // Start loading the ad in the background.
