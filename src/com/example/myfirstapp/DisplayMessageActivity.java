@@ -26,8 +26,6 @@ import android.widget.Toast;
 public class DisplayMessageActivity extends ActionBarActivity {
 
     private AdView adView;
-    
-    private static final String AD_UNIT_ID = "ca-mb-app-pub-6675826664759732/6959510322";      
 
     private static final String LOG_TAG = "BannerAdListener";
     
@@ -110,7 +108,7 @@ public class DisplayMessageActivity extends ActionBarActivity {
     private void createAd(AdSize adSize, int layoutId) {
         adView = new AdView(this);
         adView.setAdSize(adSize);
-        adView.setAdUnitId(AD_UNIT_ID);
+        adView.setAdUnitId(MainActivity.AD_UNIT_ID);
 
         // Set the AdListener.
         adView.setAdListener(new AdListener() {

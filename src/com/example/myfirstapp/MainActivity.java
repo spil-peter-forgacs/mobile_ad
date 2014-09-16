@@ -25,8 +25,8 @@ public class MainActivity extends ActionBarActivity {
     /** The log tag. */
     private static final String LOG_TAG = "InterstitialSample";
 
-    /** Your ad unit id. Replace with your actual ad unit id. */
-    private static final String AD_UNIT_ID = "ca-mb-app-pub-6675826664759732/6959510322";
+    /** Ad unit id. */
+    public static final String AD_UNIT_ID = "ca-mb-app-pub-6675826664759732/6959510322";
 
     /** The interstitial ad. */
     private InterstitialAd interstitialAd;
