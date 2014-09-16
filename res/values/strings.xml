@@ -4,8 +4,12 @@
     <string name="app_name">Advertisements</string>
     
     <string name="load_interstitial">Load Interstitial</string>
-    <string name="checkbox_lb">Leaderboard</string>
-    <string name="checkbox_mr">Medium rectangle</string>
+    <string name="checkbox_banner">Banner 320x50</string>
+    <string name="checkbox_large_banner">Large banner 320x100</string>
+    <string name="checkbox_medium_rectangle">Medium rectangle 300x250</string>
+    <string name="checkbox_full_banner">Full banner 468x60 (tablet)</string>
+    <string name="checkbox_leaderboard">Leaderboard 728x90 (tablet)</string>
+    <string name="checkbox_smart_banner">Smart banner</string>
     <string name="button_google_mobile_ads">Google Mobile ads</string>
     
     <string name="title_activity_main">MainActivity</string>

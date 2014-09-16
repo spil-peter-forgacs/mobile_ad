@@ -12,25 +12,49 @@
             android:layout_width="fill_parent"
             android:orientation="vertical">
 		    <LinearLayout
+		        android:id="@+id/linearLayoutBanner"
+		        android:orientation="vertical"
+		        android:layout_width="fill_parent"
+		        android:layout_height="wrap_content"
+		        android:layout_centerHorizontal="true" />
+		    <LinearLayout
+		        android:id="@+id/linearLayoutLargeBanner"
+		        android:orientation="vertical"
+		        android:layout_width="fill_parent"
+		        android:layout_height="wrap_content"
+		        android:layout_centerHorizontal="true" />
+		    <TextView android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:id="@+id/sampleText1"
+                android:text=""/>
+		    <LinearLayout
+		        android:id="@+id/linearLayoutMediumRectangle"
+		        android:orientation="vertical"
+		        android:layout_width="fill_parent"
+		        android:layout_height="wrap_content"
+		        android:layout_centerHorizontal="true" />
+		    <LinearLayout
+		        android:id="@+id/linearLayoutFullBanner"
+		        android:orientation="vertical"
+		        android:layout_width="fill_parent"
+		        android:layout_height="wrap_content"
+		        android:layout_centerHorizontal="true" />
+		    <TextView android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:id="@+id/sampleText2"
+                android:text=""/>
+		    <LinearLayout
+		        android:id="@+id/linearLayoutSmartBanner"
+		        android:orientation="vertical"
+		        android:layout_width="fill_parent"
+		        android:layout_height="wrap_content"
+		        android:layout_centerHorizontal="true" />
+		    <LinearLayout
 		        android:id="@+id/linearLayoutLeaderboard"
 		        android:orientation="vertical"
 		        android:layout_width="fill_parent"
 		        android:layout_height="wrap_content"
 		        android:layout_centerHorizontal="true" />
-            <TextView android:layout_height="wrap_content"
-                android:layout_width="wrap_content"
-                android:id="@+id/sampleText1"
-                android:text=""/>
-		    <LinearLayout
-		        android:id="@+id/linearLayoutRectangle"
-		        android:orientation="vertical"
-		        android:layout_width="fill_parent"
-		        android:layout_height="wrap_content"
-		        android:layout_centerHorizontal="true" />
-            <TextView android:layout_height="wrap_content"
-                android:layout_width="wrap_content"
-                android:id="@+id/sampleText2"
-                android:text=""/>
 		</LinearLayout>
     </ScrollView>
 </RelativeLayout>

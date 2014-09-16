@@ -52,12 +52,20 @@ public class DisplayMessageActivity extends ActionBarActivity {
         
         // Get the message from the intent
         Bundle bundle = getIntent().getExtras();
-        Boolean message_lb = true;
-        Boolean message_mr = true;
+        Boolean message_banner = true;
+        Boolean message_large_banner = true;
+        Boolean message_medium_rectangle = true;
+        Boolean message_full_banner = true;
+        Boolean message_leaderboard = true;
+        Boolean message_smart_banner = true;
         if (bundle!=null){
-            message_lb = bundle.getBoolean(MainActivity.EXTRA_MESSAGE_LB);
-            message_mr = bundle.getBoolean(MainActivity.EXTRA_MESSAGE_MR);
-            deviceId = bundle.getString(MainActivity.EXTRA_MESSAGE_ID);
+            message_banner = bundle.getBoolean(MainActivity.EXTRA_MESSAGE_BANNER);
+            message_large_banner = bundle.getBoolean(MainActivity.EXTRA_MESSAGE_LARGE_BANNER);
+            message_medium_rectangle = bundle.getBoolean(MainActivity.EXTRA_MESSAGE_MEDIUM_RECTANGLE);
+            message_full_banner = bundle.getBoolean(MainActivity.EXTRA_MESSAGE_FULL_BANNER);
+            message_leaderboard = bundle.getBoolean(MainActivity.EXTRA_MESSAGE_LEADERBOARD);
+            message_smart_banner = bundle.getBoolean(MainActivity.EXTRA_MESSAGE_SMART_BANNER);
+            deviceId = bundle.getString(MainActivity.EXTRA_MESSAGE_DEVICE_ID);
         }
 
         // Long HTML
@@ -72,14 +80,29 @@ public class DisplayMessageActivity extends ActionBarActivity {
         sampleTextView = (TextView)findViewById(R.id.sampleText2);
         sampleTextView.setText(spannedValue);
 
-        if (message_lb) {
+        if (message_banner) {
             // Create an ad.
-            createAd(AdSize.BANNER, R.id.linearLayoutLeaderboard);
+            createAd(AdSize.BANNER, R.id.linearLayoutBanner);
         }
-        
-        if (message_mr) {
+        if (message_large_banner) {
             // Create an ad.
-            createAd(AdSize.MEDIUM_RECTANGLE, R.id.linearLayoutRectangle);
+            createAd(AdSize.LARGE_BANNER, R.id.linearLayoutLargeBanner);
+        }        
+        if (message_medium_rectangle) {
+            // Create an ad.
+            createAd(AdSize.MEDIUM_RECTANGLE, R.id.linearLayoutMediumRectangle);
+        }
+        if (message_full_banner) {
+            // Create an ad.
+            createAd(AdSize.FULL_BANNER, R.id.linearLayoutFullBanner);
+        }
+        if (message_leaderboard) {
+            // Create an ad.
+            createAd(AdSize.LEADERBOARD, R.id.linearLayoutLeaderboard);
+        }
+        if (message_smart_banner) {
+            // Create an ad.
+            createAd(AdSize.SMART_BANNER, R.id.linearLayoutSmartBanner);
         }
 
     }

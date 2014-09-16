@@ -31,31 +31,43 @@ public class MainActivity extends ActionBarActivity {
     /** The interstitial ad. */
     private InterstitialAd interstitialAd;
     
-    private CheckBox chkLb, chkMr;
+    private CheckBox chkBanner, chkLargeBanner, chkMediumRectangle, chkFullBanner, chkLeaderboard, chkSmartBanner;
     
-    public final static String EXTRA_MESSAGE_LB = "com.example.myfirstapp.MESSAGE_LB";
-    public final static String EXTRA_MESSAGE_MR = "com.example.myfirstapp.MESSAGE_MR";
-    public final static String EXTRA_MESSAGE_ID = "com.example.myfirstapp.MESSAGE_ID";
+    public final static String EXTRA_MESSAGE_BANNER = "com.example.myfirstapp.MESSAGE_BANNER";
+    public final static String EXTRA_MESSAGE_LARGE_BANNER = "com.example.myfirstapp.MESSAGE_LARGE_BANNER";
+    public final static String EXTRA_MESSAGE_MEDIUM_RECTANGLE = "com.example.myfirstapp.MESSAGE_MEDIUM_RECTANGLE";
+    public final static String EXTRA_MESSAGE_FULL_BANNER = "com.example.myfirstapp.MESSAGE_FULL_BANNER";
+    public final static String EXTRA_MESSAGE_LEADERBOARD = "com.example.myfirstapp.MESSAGE_LEADERBOARD";
+    public final static String EXTRA_MESSAGE_SMART_BANNER = "com.example.myfirstapp.MESSAGE_SMART_BANNER";
+    public final static String EXTRA_MESSAGE_DEVICE_ID = "com.example.myfirstapp.MESSAGE_DEVICE_ID";
 
     public String android_id = "";
     public String deviceId = "";
 
     /** Called when the user clicks the Send button */
     public void sendMessage(View view) {
-        chkLb = (CheckBox) findViewById(R.id.checkbox_lb);
-        chkMr = (CheckBox) findViewById(R.id.checkbox_mr);
+        chkBanner = (CheckBox) findViewById(R.id.checkbox_banner);
+        chkLargeBanner = (CheckBox) findViewById(R.id.checkbox_large_banner);
+        chkMediumRectangle = (CheckBox) findViewById(R.id.checkbox_medium_rectangle);
+        chkFullBanner = (CheckBox) findViewById(R.id.checkbox_full_banner);
+        chkLeaderboard = (CheckBox) findViewById(R.id.checkbox_leaderboard);
+        chkSmartBanner = (CheckBox) findViewById(R.id.checkbox_smart_banner);
         
         Intent intent = new Intent(this, DisplayMessageActivity.class);
-        intent.putExtra(EXTRA_MESSAGE_LB, chkLb.isChecked());
-        intent.putExtra(EXTRA_MESSAGE_MR, chkMr.isChecked());
-        intent.putExtra(EXTRA_MESSAGE_ID, deviceId);
+        intent.putExtra(EXTRA_MESSAGE_BANNER, chkBanner.isChecked());
+        intent.putExtra(EXTRA_MESSAGE_LARGE_BANNER, chkLargeBanner.isChecked());
+        intent.putExtra(EXTRA_MESSAGE_MEDIUM_RECTANGLE, chkMediumRectangle.isChecked());
+        intent.putExtra(EXTRA_MESSAGE_FULL_BANNER, chkFullBanner.isChecked());
+        intent.putExtra(EXTRA_MESSAGE_LEADERBOARD, chkLeaderboard.isChecked());
+        intent.putExtra(EXTRA_MESSAGE_SMART_BANNER, chkSmartBanner.isChecked());
+        intent.putExtra(EXTRA_MESSAGE_DEVICE_ID, deviceId);
         startActivity(intent);
     }
     
-    public void onCheckboxLbClicked(View view) {
+    public void onCheckboxBannerClicked(View view) {
     }
     
-    public void onCheckboxMrClicked(View view) {
+    public void onCheckboxMediumRectangleClicked(View view) {
     }
     
     @Override
