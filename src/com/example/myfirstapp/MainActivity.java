@@ -15,6 +15,10 @@ import android.view.View;
 import android.widget.CheckBox;
 import android.widget.Toast;
 
+import java.security.MessageDigest;
+import java.security.NoSuchAlgorithmException;
+import android.provider.Settings.Secure;
+
 
 public class MainActivity extends ActionBarActivity {
     
@@ -31,6 +35,10 @@ public class MainActivity extends ActionBarActivity {
     
     public final static String EXTRA_MESSAGE_LB = "com.example.myfirstapp.MESSAGE_LB";
     public final static String EXTRA_MESSAGE_MR = "com.example.myfirstapp.MESSAGE_MR";
+    public final static String EXTRA_MESSAGE_ID = "com.example.myfirstapp.MESSAGE_ID";
+
+    public String android_id = "";
+    public String deviceId = "";
 
     /** Called when the user clicks the Send button */
     public void sendMessage(View view) {
@@ -40,6 +48,7 @@ public class MainActivity extends ActionBarActivity {
         Intent intent = new Intent(this, DisplayMessageActivity.class);
         intent.putExtra(EXTRA_MESSAGE_LB, chkLb.isChecked());
         intent.putExtra(EXTRA_MESSAGE_MR, chkMr.isChecked());
+        intent.putExtra(EXTRA_MESSAGE_ID, deviceId);
         startActivity(intent);
     }
     
@@ -53,6 +62,11 @@ public class MainActivity extends ActionBarActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        
+        
+        android_id = Secure.getString(this.getContentResolver(), Secure.ANDROID_ID);
+        deviceId = md5(android_id).toUpperCase();
+
         
         // Create an ad.
         interstitialAd = new InterstitialAd(this);
@@ -111,10 +125,7 @@ public class MainActivity extends ActionBarActivity {
       // Check the logcat output for your hashed device ID to get test ads on a physical device.
       AdRequest adRequest = new AdRequest.Builder()
           .addTestDevice(AdRequest.DEVICE_ID_EMULATOR)
-          .addTestDevice("C7780C08B0538F034D630D3AC89DF5E8")
-          .addTestDevice("3dda3d969987becb")
-          .addTestDevice("65083ee0257af1f0")
-          .addTestDevice("eea04b2d9a14f90e")
+          .addTestDevice(deviceId)
           .build();
 
       // Load the interstitial ad.
@@ -139,5 +150,27 @@ public class MainActivity extends ActionBarActivity {
           break;
       }
       return errorReason;
+    }
+    
+    public String md5(String s) {
+        try {
+            // Create MD5 Hash
+            MessageDigest digest = java.security.MessageDigest.getInstance("MD5");
+            digest.update(s.getBytes());
+            byte messageDigest[] = digest.digest();
+
+            // Create Hex String
+            StringBuffer hexString = new StringBuffer();
+            for (int i = 0; i < messageDigest.length; i++) {
+                String h = Integer.toHexString(0xFF & messageDigest[i]);
+                while (h.length() < 2)
+                    h = "0" + h;
+                hexString.append(h);
+            }
+            return hexString.toString();
+
+        } catch (NoSuchAlgorithmException e) {
+        }
+        return "";
     }
 }

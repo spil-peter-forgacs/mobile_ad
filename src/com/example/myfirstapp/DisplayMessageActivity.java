@@ -22,6 +22,7 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
+
 public class DisplayMessageActivity extends ActionBarActivity {
 
     private AdView adView;
@@ -33,6 +34,8 @@ public class DisplayMessageActivity extends ActionBarActivity {
     private TextView sampleTextView;
     private Spanned spannedValue;
     private String stringWithHtml;
+    
+    public String deviceId = "";
     
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -54,6 +57,7 @@ public class DisplayMessageActivity extends ActionBarActivity {
         if (bundle!=null){
             message_lb = bundle.getBoolean(MainActivity.EXTRA_MESSAGE_LB);
             message_mr = bundle.getBoolean(MainActivity.EXTRA_MESSAGE_MR);
+            deviceId = bundle.getString(MainActivity.EXTRA_MESSAGE_ID);
         }
 
         // Long HTML
@@ -133,15 +137,12 @@ public class DisplayMessageActivity extends ActionBarActivity {
         // Add the AdView to the view hierarchy.
         LinearLayout layoutRectangle = (LinearLayout) findViewById(layoutId);
         layoutRectangle.addView(adView);
-
+        
         // Create an ad request. Check logcat output for the hashed device ID to
         // get test ads on a physical device.
         AdRequest adRequest = new AdRequest.Builder()
             .addTestDevice(AdRequest.DEVICE_ID_EMULATOR)
-            .addTestDevice("C7780C08B0538F034D630D3AC89DF5E8")
-            .addTestDevice("3dda3d969987becb")
-            .addTestDevice("65083ee0257af1f0")
-            .addTestDevice("eea04b2d9a14f90e")
+            .addTestDevice(deviceId)
             .build();
 
         // Start loading the ad in the background.
